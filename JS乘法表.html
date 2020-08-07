@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       //九九乘法表
+       //一共九行，每行个数不同，需要双重for循环
+       //内层控制每行公式
+       //外层控制行数，循环九次
+       //每行个数和行数相同
+       //每次打印完重新换一行
+       var str='';
+       var i=1,j=1;
+       for(i=1;i<=9;i++)
+       {
+           for(j=1;j<=i;j++)
+           {
+               str+=j+'*'+i+'='+j*i+'\t';
+           }
+           str+='\n';
+       }
+       console.log(str);
+
+
+       console.log('\n');
+       var m=1,n=1;
+       for(m=1;m<=9;m++){
+           for(n=1;n<=m;n++)
+           {
+               console.log(''+n+'*'+m+'='+n*m);
+           }
+           console.log('\n');
+       }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
