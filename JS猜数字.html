@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //随机生成一个1-10的整数，需要Math.random()方法
+        //需要一直猜到正确为止，需要一直循环
+        //用while循环
+        //核心算法：使用if else if多分支语句判断大于，小于，等于
+        function getRandom(min,max){
+              return Math.floor(Math.random()*(max-min+1))+min;
+        }
+        var random=getRandom(1,10);
+        while(true){//死循环
+            var num=prompt('你来猜：输入1-10之间的一个数字');
+        if(num>random){
+            alert('你猜大了');
+        }
+        else if(num<random){
+            alert('你猜小了');
+        }
+        else{
+            alert('猜对啦');
+            break;
+        }
+
+        }
+
+    </script>
+</head>
+<body>
+    程序随机生成一个1-10之间的数字，并且让用户输入一个数字<br>
+
+    如果大于该数字，则提示数字大了，继续猜<br>
+    如果小于该数字，则提示数字小了，继续猜<br>
+    如果等于该数字，则提示猜对了，结束程序<br>
+</body>
+</html>
