@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.使用push方法在数组末尾添加元素
+        var arr=[1,2,3];
+        arr.push(4,5);
+        console.log(arr);//Array(5)
+        
+        //2.unshift在数组开头添加新元素
+        arr.unshift(0);
+        console.log(arr);//Array(6)
+
+        //3.pop()可以删除数组最后一个元素
+        //console.log(arr.pop());//  删除哪个元素则返回哪个元素
+        arr.pop();
+        console.log(arr);//Array(5)
+       
+        //4.shift可以删除数组第一个元素
+        arr.shift();
+        console.log(arr);//Array(4)
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
