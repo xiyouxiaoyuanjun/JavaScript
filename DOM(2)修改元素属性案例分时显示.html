@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 不同时间显示不同的图片 -->
+    <img src='1.jpg'>
+    <div>上午好</div>
+    <script>
+        //根据系统不同时间来判断，需要用到日期内置对象
+
+        //利用多分支语句来设置不同的图片
+
+        //需要一个图片，并且根据不同时间修改图片，需要用到src属性
+
+        //需要一个div元素，显示不同问候语，修改元素内容即可
+
+        var img=document.querySelector('img');
+        var img=document.querySelector('div');
+
+        var date=new Date();
+        var h=date.getHours();
+
+        if(h<12){
+            img.src='2.png';
+            div.innerHTML='早上好好写代码';
+        }else if(h<18){
+            img.src='3.png';
+            div.innerHTML='下午好好写代码';
+        }else{
+            img.src='4.png';
+            div.innerHTML='晚上好好写代码';
+        }
+
+    </script>
+</body>
+</html>
