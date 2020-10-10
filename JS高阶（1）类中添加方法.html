@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //创建类class
+      class str{
+         constructor(uname,age){
+            this.uname=uname;
+            this.age=age;
+            
+         }
+         sing(song){
+             console.log(this.uname+song);
+         }
+      }
+      //利用类创建对象new
+      var ldh = new str('aaa',18);
+      
+      ldh.sing('ldh');
+    </script>
+  </body>
+</html>
