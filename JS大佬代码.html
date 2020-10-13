@@ -1,0 +1,76 @@
+function $(id){
+    return document.getElementById(id);
+}
+
+var imgIndex = [
+    "callbacks_1",
+    "callbacks_2",
+    "callbacks_3",
+]
+
+var bannerIndex = [
+    "banner1",
+    "banner2",
+    "banner3",
+]
+
+$(bannerIndex[0]).classList.add('active');
+$(imgIndex[0]).classList.add('here');
+
+var index = 0;
+
+function nextBanner(){
+    $(bannerIndex[index]).classList.remove("active");
+    $(imgIndex[index]).classList.remove("here");
+    index+1 == bannerIndex.length ? index = 0: index++;
+    changBanner(index);
+}
+
+function changBanner(index){
+    $(bannerIndex[index]).classList.add('active');
+    $(imgIndex[index]).classList.add('here');
+}
+
+function interval(){
+    t=setInterval(nextBanner,5000);
+}
+
+function removeclass(){
+    for ( var i=0; i<bannerIndex.length; i++){
+        $(bannerIndex[i]).classList.remove("active");
+        $(imgIndex[i]).classList.remove("here");
+    }
+}
+
+$("ctrl_btn").onmouseover = function(){
+    clearInterval(t);
+}
+
+$("ctrl_btn").onmouseout = function(){
+    interval();
+}
+
+$("callbacks_1").onclick =function(){
+    index = 0;
+    removeclass();
+    this.classList.add("here");
+    $(bannerIndex[index]).classList.add("active");
+}
+
+$("callbacks_2").onclick =function(){
+    index = 1;
+    removeclass();
+    this.classList.add("here");
+    $(bannerIndex[index]).classList.add("active");
+}
+
+$("callbacks_3").onclick =function(){
+    index = 2;
+    removeclass();
+    this.classList.add("here");
+    $(bannerIndex[index]).classList.add("active");
+}
+
+
+
+interval();
