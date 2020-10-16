@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class father{
+            constructor(x,y){
+                this.x=x;
+                this.y=y;
+            }
+            sum(){
+                console.log(this.x+this.y);
+            }
+        }
+        class son extends father{
+            constructor(x,y){
+                super(x,y);
+                this.x=x;
+                this.y=y;
+            }
+            subtract(){
+                console.log(this.x-this.y);
+            }
+        }
+        var Son =new son(5,3);
+        Son.subtract();
+        Son.sum();
+    </script>
+</body>
+</html>
